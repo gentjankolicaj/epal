@@ -1,5 +1,6 @@
 package org.epal.client_service.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.epal.client_service.service.UserService;
 import org.epal.commons.client.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/user")
+@Slf4j
 public class UserController {
 
     @Autowired
@@ -18,6 +20,7 @@ public class UserController {
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<User> findAll() {
+        log.info("Find all users called.");
         return userService.findAll();
     }
 
@@ -25,6 +28,7 @@ public class UserController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public User save(@RequestBody User newUser) {
+        log.info("Save user called.");
         return userService.save(newUser);
     }
 }
