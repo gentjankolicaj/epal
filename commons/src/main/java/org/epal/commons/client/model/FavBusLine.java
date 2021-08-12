@@ -3,21 +3,31 @@ package org.epal.commons.client.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.epal.commons.client.model.id.FavBusLineId;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
+import javax.persistence.Table;
 import java.io.Serializable;
+import java.time.Instant;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+
+@IdClass(FavBusLineId.class)
 @Entity
-@Table(name="fav_bus_line")
+@Table(name = "fav_bus_line")
 public class FavBusLine implements Serializable {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long id;
-    private Long clientId;
+    private Long userId;
+    @Id
     private Long busLineId;
+
+    private Instant createdDate;
+    private Instant deletedDate;
+
 
 }
