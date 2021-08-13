@@ -3,7 +3,10 @@ package org.epal.client_service.service;
 import org.epal.client_service.repository.FavBusLineRepository;
 import org.epal.commons.client.model.FavBusLine;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.Instant;
 import java.util.ArrayList;
@@ -14,9 +17,11 @@ import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@ExtendWith(MockitoExtension.class)
 public class FavouriteServiceImplTest {
 
-    private final FavBusLineRepository favBusLineRepository= Mockito.mock(FavBusLineRepository.class);
+    @Mock   //Plays the role of Mockito.mock by creating mock object.
+    private FavBusLineRepository favBusLineRepository;
 
     private final FavouriteService favouriteService=new FavouriteServiceImpl(favBusLineRepository);
 
