@@ -26,7 +26,7 @@ public class BusLocationController {
         return busLocationService.getBusLineLocationsByBusLineId(busLineId);
     }
 
-    @GetMapping("")
+    @GetMapping("/")
     @ResponseStatus(HttpStatus.OK)
     public BusLocationResponse getBusLocationByBusId(@RequestParam("busId") Long busId){
         return busLocationService.getBusLocationByBusId(busId);

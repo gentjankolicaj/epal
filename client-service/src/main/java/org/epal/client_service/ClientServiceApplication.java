@@ -20,7 +20,7 @@ import java.util.concurrent.Executors;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients //Enables non-blocking & with load-balanced  rest clients with service discovery
-@EntityScan("org.epal.commons.client.*")
+@EntityScan("org.epal.commons.service.client.*")
 public class ClientServiceApplication {
 
     private final BeanFactory beanFactory;

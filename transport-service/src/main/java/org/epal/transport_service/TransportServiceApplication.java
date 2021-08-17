@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EntityScan("org.epal.commons.transport.*")
+@EntityScan("org.epal.commons.service.transport.*")
 public class TransportServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(TransportServiceApplication.class, args);
