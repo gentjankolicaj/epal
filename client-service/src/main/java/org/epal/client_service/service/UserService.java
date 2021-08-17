@@ -1,7 +1,7 @@
 package org.epal.client_service.service;
 
 
-import org.epal.commons.client.model.User;
+import org.epal.commons.service.client.model.User;
 
 import java.util.List;
 import java.util.Optional;

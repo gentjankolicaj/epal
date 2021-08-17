@@ -1,7 +1,7 @@
 package org.epal.client_service.service;
 
 import org.epal.client_service.repository.UserRepository;
-import org.epal.commons.client.model.User;
+import org.epal.commons.service.client.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -2,8 +2,8 @@ package org.epal.client_service.service;
 
 import lombok.AllArgsConstructor;
 import org.epal.client_service.repository.FavBusLineRepository;
-import org.epal.commons.client.model.FavBusLine;
-import org.epal.commons.client.model.id.FavBusLineId;
+import org.epal.commons.service.client.model.FavBusLine;
+import org.epal.commons.service.client.model.id.FavBusLineId;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;

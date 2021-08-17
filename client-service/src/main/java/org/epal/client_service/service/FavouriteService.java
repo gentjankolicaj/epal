@@ -1,6 +1,6 @@
 package org.epal.client_service.service;
 
-import org.epal.commons.client.model.FavBusLine;
+import org.epal.commons.service.client.model.FavBusLine;
 
 import java.util.List;
 

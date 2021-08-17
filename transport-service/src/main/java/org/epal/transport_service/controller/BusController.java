@@ -1,7 +1,7 @@
 package org.epal.transport_service.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.epal.commons.transport.model.Bus;
+import org.epal.commons.service.transport.model.Bus;
 import org.epal.transport_service.service.BusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

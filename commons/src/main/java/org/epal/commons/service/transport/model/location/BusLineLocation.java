@@ -1,13 +1,15 @@
 package org.epal.commons.service.transport.model.location;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.epal.commons.service.transport.model.Bus;
+import org.epal.commons.service.transport.model.Coordinate;
+import org.epal.commons.service.transport.model.MotionMeta;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
 public class BusLineLocation extends AbstractLocation {
     private Bus bus;
+    public BusLineLocation(Bus bus,Coordinate coordinate, MotionMeta motionMeta) {
+        super(coordinate, motionMeta);
+        this.bus = bus;
+    }
 }

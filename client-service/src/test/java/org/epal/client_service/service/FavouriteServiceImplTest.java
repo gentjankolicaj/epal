@@ -1,7 +1,7 @@
 package org.epal.client_service.service;
 
 import org.epal.client_service.repository.FavBusLineRepository;
-import org.epal.commons.client.model.FavBusLine;
+import org.epal.commons.service.client.model.FavBusLine;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
