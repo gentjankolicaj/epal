@@ -1,9 +1,9 @@
-package org.epal.commons.client.model;
+package org.epal.commons.service.client.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.epal.commons.client.model.id.FavBusLineId;
+import org.epal.commons.service.client.model.id.FavBusLineId;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

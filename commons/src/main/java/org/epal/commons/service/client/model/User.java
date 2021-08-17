@@ -1,4 +1,4 @@
-package org.epal.commons.transport.model;
+package org.epal.commons.service.client.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,14 +11,15 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "bus")
-public class Bus implements Serializable {
+@Table(name = "user")
+public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String plate;
-    private String brand;
-
+    private String username;
+    private String password;
+    private String firstname;
+    private String lastname;
 
 }
