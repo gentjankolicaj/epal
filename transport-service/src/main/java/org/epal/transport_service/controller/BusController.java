@@ -1,7 +1,7 @@
 package org.epal.transport_service.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.epal.commons.service.transport.model.Bus;
+import org.epal.transport_service.domain.Bus;
 import org.epal.transport_service.service.BusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -20,8 +20,22 @@ public class BusController {
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<Bus> findAll() {
-        log.info("FindAll mapping found.");
+        log.info("Finding all buses.");
         return busService.findAll();
+    }
+
+    @GetMapping("/")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Bus> findBusesByBusLineId(@RequestParam("busLineId") Long busLineId) {
+        log.info("Finding all buses by bus line id " + busLineId);
+        return busService.findAllBusesByBusLineId(busLineId);
+    }
+
+    @GetMapping("/{busId}")
+    @ResponseStatus(HttpStatus.OK)
+    public Bus findBusDetailsById(@PathVariable Long busId) {
+        log.info("Finding bus details by bus  id " + busId);
+        return busService.findBusDetailsById(busId);
     }
 
     @PostMapping

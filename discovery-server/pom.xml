@@ -8,16 +8,25 @@
         <version>2.5.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>org.epal</groupId>
     <artifactId>discovery-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>discovery-server</name>
     <description>discovery-server</description>
+
     <properties>
         <java.version>11</java.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-cloud.version>2020.0.3</spring-cloud.version>
     </properties>
+
     <dependencies>
+
+        <!-- For eureka service registry server -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
@@ -28,7 +37,15 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+
     </dependencies>
+
+    <!-- Config of spring-cloud-dependencies -->
     <dependencyManagement>
         <dependencies>
             <dependency>

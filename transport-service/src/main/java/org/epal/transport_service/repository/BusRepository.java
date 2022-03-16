@@ -1,6 +1,6 @@
 package org.epal.transport_service.repository;
 
-import org.epal.commons.service.transport.model.Bus;
+import org.epal.transport_service.domain.Bus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

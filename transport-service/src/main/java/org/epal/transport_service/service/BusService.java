@@ -1,7 +1,7 @@
 package org.epal.transport_service.service;
 
 
-import org.epal.commons.service.transport.model.Bus;
+import org.epal.transport_service.domain.Bus;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,5 +13,8 @@ public interface BusService {
 
     Optional<Bus> findInDuty(Long id);
 
+    List<Bus> findAllBusesByBusLineId(Long busLineId);
+
+    Bus findBusDetailsById(Long busId);
 
 }

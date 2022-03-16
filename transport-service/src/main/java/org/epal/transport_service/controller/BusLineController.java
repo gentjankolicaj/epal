@@ -2,7 +2,7 @@ package org.epal.transport_service.controller;
 
 
 import lombok.extern.slf4j.Slf4j;
-import org.epal.commons.service.transport.model.BusLine;
+import org.epal.transport_service.domain.BusLine;
 import org.epal.transport_service.service.BusLineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.function.StreamBridge;
