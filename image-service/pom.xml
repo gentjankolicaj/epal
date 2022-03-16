@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.epal</groupId>
     <artifactId>image-service</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
     <name>image-service</name>
     <description>image-service</description>
 
