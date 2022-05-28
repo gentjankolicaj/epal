@@ -3,8 +3,8 @@ package io.epal.transport.service;
 import io.epal.transport.data_provider.LocationProvider;
 import io.epal.transport.domain.BusLineLocation;
 import io.epal.transport.domain.BusLocation;
-import org.epal.transport_service.api.bus.BusLineLocationResponse;
-import org.epal.transport_service.api.bus.BusLocationResponse;
+import io.epal.transport.api.BusLineLocationResponse;
+import io.epal.transport.api.BusLocationResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

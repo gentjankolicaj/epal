@@ -1,8 +1,8 @@
 package io.epal.transport.service;
 
 
-import org.epal.transport_service.api.bus.BusLineLocationResponse;
-import org.epal.transport_service.api.bus.BusLocationResponse;
+import io.epal.transport.api.BusLineLocationResponse;
+import io.epal.transport.api.BusLocationResponse;
 
 public interface LocationService {
 

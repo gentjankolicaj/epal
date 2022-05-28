@@ -1,13 +1,11 @@
 package io.epal.notification;
 
+import io.epal.notification.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.context.annotation.Bean;
-import org.springframework.messaging.Message;
 
-import java.util.function.Consumer;
 
 @SpringBootApplication
 @EnableEurekaClient
@@ -21,10 +19,11 @@ public class NotificationApplication {
     private EmailService emailService;
 
     //Create consumer of events from rabbitmq
+    /**
     @Bean
     public Consumer<Message<String>> notificationEventSupplier(){
         return message->{ emailService.sendEmail(message.getPayload());};
     }
-
+  */
 
 }

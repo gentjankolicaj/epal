@@ -2,8 +2,8 @@ package io.epal.transport.controller;
 
 
 import io.epal.transport.service.LocationService;
-import org.epal.transport_service.api.bus.BusLineLocationResponse;
-import org.epal.transport_service.api.bus.BusLocationResponse;
+import io.epal.transport.api.BusLineLocationResponse;
+import io.epal.transport.api.BusLocationResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
