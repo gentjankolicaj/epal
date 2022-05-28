@@ -35,6 +35,8 @@
 
         <maven-compiler.version>3.8.1</maven-compiler.version>
         <maven-surefire.version>3.0.0-M6</maven-surefire.version>
+        <maven-failsafe.version>3.0.0-M6</maven-failsafe.version>
+
         <spring-cloud.version>2021.0.3-SNAPSHOT</spring-cloud.version>
         <spring-boot.verion>2.7.0</spring-boot.verion>
         <mysql.version>8.0.29</mysql.version>

@@ -100,6 +100,28 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven-surefire.version}</version>
             </plugin>
+
+            <!-- Failsafe plugin runs and verifies tests using different goals.
+         A test failure in the integration-test phase doesn't fail the build straight away,
+         allowing the phase post-integration-test to execute, where clean-up operations are performed.
+         Failed tests, if any, are only reported during the verify phase,
+         after the integration test environment has been torn down properly.
+         -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>${maven-failsafe.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                        <configuration></configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 
