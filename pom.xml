@@ -45,7 +45,7 @@
         <nexus-staging-maven.version>1.6.13</nexus-staging-maven.version>
 
         <spring-cloud.version>2021.0.3-SNAPSHOT</spring-cloud.version>
-        <spring-boot.verion>2.7.0</spring-boot.verion>
+        <spring-boot.version>2.7.0</spring-boot.version>
         <mysql.version>8.0.29</mysql.version>
         <lombok.version>1.18.24</lombok.version>
         <testcontainers.version>1.17.2</testcontainers.version>
@@ -86,7 +86,6 @@
             <version>${mockito-junit-jupiter.version}</version>
             <scope>test</scope>
         </dependency>
-
 
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -312,8 +311,6 @@
                 <artifactId>maven-site-plugin</artifactId>
                 <version>${maven-site.version}</version>
             </plugin>
-
-
         </plugins>
     </build>
 
