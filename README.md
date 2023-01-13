@@ -26,5 +26,9 @@ Public repository for epal project
 ## TO RUN
 
 ```
-docker compose up -d
+mvn clean package
+```
+
+```
+docker compose up --build
 ```
