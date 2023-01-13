@@ -1,0 +1,31 @@
+version: '2'
+
+networks:
+  internal_net:
+    driver: bridge
+
+
+services:
+  api-gateway:
+    build:
+      context: api-gateway
+      dockerfile: Dockerfile
+    image: edata-apigateway:latest
+    container_name: api-gateway
+    networks:
+      internal_net:
+    depends_on:
+      - discovery-server
+  discovery-server:
+    build:
+      context: discovery-server
+      dockerfile: Dockerfile
+    image: edata-discoveryserver:latest
+    container_name: discovery-server
+    ports:
+      - "8761:8761"
+    networks:
+      internal_net:
+
+
+
