@@ -1,16 +1,11 @@
+spring:
+  application:
+    name: api-gateway
+
 eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
   instance:
     instance-id: ${spring.application.name}:${random.uuid}
-spring:
-  application:
-    name: api-gateway
-  cloud:
-    gateway:
-      routes:
-        - id: path_route
-          uri: https://example.org
-          predicates:
-            - Path=/red/{segment},/blue/{segment}
+
