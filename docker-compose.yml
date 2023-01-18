@@ -33,6 +33,15 @@ services:
       discovery-server:
         condition: service_healthy
 
+  jaeger-service:
+    image: jaegertracing/all-in-one:1.41
+    container_name: jaeger-service
+    ports:
+      - "16686:16686"
+    networks:
+      internal_network:
+
+
 
 
 
