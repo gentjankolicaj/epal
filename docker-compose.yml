@@ -1,4 +1,4 @@
-version: '3'
+version: '3.9'
 
 networks:
   internal_network: { }
@@ -14,6 +14,11 @@ services:
       - "8761:8761"
     networks:
       internal_network:
+    healthcheck:
+      test: [ "CMD","curl","-f","http://localhost:8761/" ]
+      interval: 1m
+      timeout: 10s
+      retries: 10
   api-gateway:
     build:
       context: api-gateway
@@ -25,7 +30,8 @@ services:
     networks:
       internal_network:
     depends_on:
-      - discovery-server
+      discovery-server:
+        condition: service_healthy
 
 
 
