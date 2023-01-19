@@ -42,7 +42,6 @@ services:
   #Opentelemetry collector
   otel-collector:
     image: otel/opentelemetry-collector:0.69.0
-    container_name: otel-collector
     restart: always
     command: [ "--config=/etc/otel-collector-config.yaml", "${OTELCOL_ARGS}" ]
     volumes:
@@ -70,6 +69,8 @@ services:
     environment:
       - OTEL_SERVICE_NAME=discovery-server
       - OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4317
+      # Logs are disabled by default
+      - OTEL_LOGS_EXPORTER=otlp
     ports:
       - "8761:8761"
     networks:
@@ -92,6 +93,8 @@ services:
     environment:
       - OTEL_SERVICE_NAME=api-gateway
       - OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4317
+      # Logs are disabled by default
+      - OTEL_LOGS_EXPORTER=otlp
     ports:
       - "8080:8080"
     networks:
